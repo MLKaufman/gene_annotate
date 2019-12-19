@@ -17,7 +17,7 @@ parser.add_argument("-c", "--column", help="column # to use for getting gene sym
 
 argument = parser.parse_args()
 
-database_path = 'database' + os.sep
+database_path = 'databases' + os.sep
 
 def load_species_db(species):
     if species == "human":
