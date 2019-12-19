@@ -17,15 +17,17 @@ parser.add_argument("-c", "--column", help="column # to use for getting gene sym
 
 argument = parser.parse_args()
 
+database_path = 'database' + os.sep
+
 def load_species_db(species):
     if species == "human":
-        df = pd.read_csv('genelist_human_complete_12032019.csv', header=0, sep=',')
+        df = pd.read_csv(database_path + 'genelist_human_complete_12032019.csv', header=0, sep=',')
     if species == "mouse":
-        df = pd.read_csv('genelist_mouse_complete_12032019.csv', header=0, sep=',')
+        df = pd.read_csv(database_path + 'genelist_mouse_complete_12032019.csv', header=0, sep=',')
     if species == "gallus":
-        df = pd.read_csv('genelist_gallus_complete_12032019.csv', header=0, sep=',')
+        df = pd.read_csv(database_path + 'genelist_gallus_complete_12032019.csv', header=0, sep=',')
     if species == "danio":
-        df = pd.read_csv('genelist_danio_complete_12032019.csv', header=0, sep=',')
+        df = pd.read_csv(database_path + 'genelist_danio_complete_12032019.csv', header=0, sep=',')
 
     return df
 
