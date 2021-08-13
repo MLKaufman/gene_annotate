@@ -1,5 +1,5 @@
 # gene_annotate
-### Tool to annotate csv or tsv files containing a column of gene symbols. Outputs formal gene name and protein function/class to table.
+### CLI tool to annotate csv or tsv files containing a column of gene symbols. Outputs formal gene name and protein function/class to table.
 
 ```
 usage: gene_annotate.py [-h] [-i] [-s SPECIES] [-a ANNOTATEMODE] [-c COLUMN]
