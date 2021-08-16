@@ -1,3 +1,5 @@
+from gene_annotate import setup
+
 setup(
     name='gene_annotate',
     version='1.0,
