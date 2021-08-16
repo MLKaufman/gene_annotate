@@ -4,7 +4,7 @@ EXCLUDE_FROM_PACKAGES = ["contrib", "docs", "tests*"]
 
 setup(
     name='gene_annotate',
-    version='1.0,
+    version='1.0',
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
     include_package_data=True,
     zip_safe=False,
