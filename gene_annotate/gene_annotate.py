@@ -55,7 +55,7 @@ def return_specific(gene, species, record):
     return results
 ###
 
-if __name__ == "__main__":
+def main():
     # run file as a script
     if argument.interactivemode is True:
         df = load_species_db(argument.species) # load species database
@@ -127,3 +127,6 @@ if __name__ == "__main__":
         an_df.to_csv(file_path + '_annotated.csv', index=False)
 
         # save a copy of file with _annotated.<file_extension>
+
+if __name__ == "__main__":
+    main()
