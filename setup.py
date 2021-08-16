@@ -11,8 +11,5 @@ setup(
     entry_points={'console_scripts': ['gene_annotate=gene_annotate.gene_annotate:main']},
     python_requires=">=3.6",
     install_requires="pandas",
-    package_data={'gene_annotate': ['/databases/genelist_danio_complete_12032019.csv',
-    '/databases/genelist_gallus_complete_12032019.csv',
-    '/databases/genelist_human_complete_12032019.csv',
-    '/databases/genelist_mouse_complete_12032019.csv']}
+    package_data={'gene_annotate': ['/databases/*.csv']}
 )
