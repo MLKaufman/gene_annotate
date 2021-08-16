@@ -1,4 +1,4 @@
-from gene_annotate import setup
+from distutils.core import setup
 
 setup(
     name='gene_annotate',
