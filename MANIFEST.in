@@ -1,4 +1,4 @@
-include /gene_annotate/databases/genelist_danio_complete_12032019.csv
-include /gene_annotate/databases/genelist_gallus_complete_12032019.csv
-include /gene_annotate/databases/genelist_human_complete_12032019.csv
-include /gene_annotate/databases/genelist_mouse_complete_12032019.csv
+include gene_annotate/databases/genelist_danio_complete_12032019.csv
+include gene_annotate/databases/genelist_gallus_complete_12032019.csv
+include gene_annotate/databases/genelist_human_complete_12032019.csv
+include gene_annotate/databases/genelist_mouse_complete_12032019.csv
