@@ -25,6 +25,7 @@ database_path = 'databases' + os.sep
 
 def load_species_db(species):
     try:
+        print("CSV method")
         if species == "human":
             df = pd.read_csv(database_path + 'genelist_human_complete_12032019.csv', header=0, sep=',')
         if species == "mouse":
@@ -35,6 +36,7 @@ def load_species_db(species):
             df = pd.read_csv(database_path + 'genelist_danio_complete_12032019.csv', header=0, sep=',')
 
     except: #if cant find the hard path then find the package resources
+        print("nope resource stream")
         if species == "human":
             df = pd.read_csv(load(resource_stream('gene_annotate', database_path + 'genelist_human_complete_12032019.csv')), header=0, sep=',')
         if species == "mouse":
