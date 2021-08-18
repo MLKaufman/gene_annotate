@@ -10,6 +10,6 @@ setup(
     zip_safe=False,
     entry_points={'console_scripts': ['gene_annotate=gene_annotate.gene_annotate:main']},
     python_requires=">=3.6",
-    install_requires="pandas", "pkg-resources",
+    install_requires="pandas",
     package_data={'gene_annotate': ['/databases/*.csv']}
 )
