@@ -23,8 +23,6 @@ argument = parser.parse_args()
 
 database_path = 'databases' + os.sep
 
-schema = load(resource_stream('gene_annotate', database_path + 'genelist_mouse_complete_12032019.csv'))
-
 def load_species_db(species):
     try:
         if species == "human":
