@@ -1,5 +1,11 @@
 # gene_annotate
 ### CLI tool to annotate csv or tsv files containing a column of gene symbols. Outputs formal gene name and protein function/class to table.
+Prefered method of installation using pipx: https://pypa.github.io/pipx/
+...
+pip install pipx
+
+pipx install gh+https://github.com/MLKaufman/gene_annotate.git
+...
 
 ```
 usage: gene_annotate.py [-h] [-i] [-s SPECIES] [-a ANNOTATEMODE] [-c COLUMN]
