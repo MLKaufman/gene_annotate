@@ -2,6 +2,10 @@ import os
 import argparse
 import pandas as pd
 
+#attempt at using package resources
+from json import load
+from pkg_resources import resource_stream
+
 if os.name == 'nt':
     import pyreadline # non-standard library input history
 else:
@@ -19,16 +23,28 @@ argument = parser.parse_args()
 
 database_path = 'databases' + os.sep
 
-def load_species_db(species):
-    if species == "human":
-        df = pd.read_csv(database_path + 'genelist_human_complete_12032019.csv', header=0, sep=',')
-    if species == "mouse":
-        df = pd.read_csv(database_path + 'genelist_mouse_complete_12032019.csv', header=0, sep=',')
-    if species == "gallus":
-        df = pd.read_csv(database_path + 'genelist_gallus_complete_12032019.csv', header=0, sep=',')
-    if species == "danio":
-        df = pd.read_csv(database_path + 'genelist_danio_complete_12032019.csv', header=0, sep=',')
+schema = load(resource_stream('gene_annotate', database_path + 'genelist_mouse_complete_12032019.csv'))
 
+def load_species_db(species):
+    try:
+        if species == "human":
+            df = pd.read_csv(database_path + 'genelist_human_complete_12032019.csv', header=0, sep=',')
+        if species == "mouse":
+            df = pd.read_csv(database_path + 'genelist_mouse_complete_12032019.csv', header=0, sep=',')
+        if species == "gallus":
+            df = pd.read_csv(database_path + 'genelist_gallus_complete_12032019.csv', header=0, sep=',')
+        if species == "danio":
+            df = pd.read_csv(database_path + 'genelist_danio_complete_12032019.csv', header=0, sep=',')
+
+    except: #if cant find the hard path then find the package resources
+        if species == "human":
+            df = pd.read_csv(load(resource_stream('gene_annotate', database_path + 'genelist_human_complete_12032019.csv')), header=0, sep=',')
+        if species == "mouse":
+            df = pd.read_csv(load(resource_stream('gene_annotate', database_path + 'genelist_mouse_complete_12032019.csv')), header=0, sep=',')
+        if species == "gallus":
+            df = pd.read_csv(load(resource_stream('gene_annotate', database_path + 'genelist_gallus_complete_12032019.csv')), header=0, sep=',')
+        if species == "danio":
+            df = pd.read_csv(load(resource_stream('gene_annotate', database_path + 'genelist_danio_complete_12032019.csv')), header=0, sep=',')
     return df
 
     
