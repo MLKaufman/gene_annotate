@@ -7,8 +7,8 @@ setup(
     version='1.0',
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
     package_dir={'gene_annotate': 'gene_annotate'},
+    include_package_data=True,
     entry_points={'console_scripts': ['gene_annotate=gene_annotate.gene_annotate:main']},
     python_requires=">=3.6",
-    install_requires=["pandas", "setuptools-git"],
-    package_data={'': ['*.csv']}
+    install_requires=["pandas", "setuptools-git"]
 )
