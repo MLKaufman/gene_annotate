@@ -9,6 +9,6 @@ setup(
     package_dir={'gene_annotate': 'gene_annotate'},
     entry_points={'console_scripts': ['gene_annotate=gene_annotate.gene_annotate:main']},
     python_requires=">=3.6",
-    install_requires="pandas",
+    install_requires=["pandas", "setuptools-git"],
     package_data={'gene_annotate': ['/databases/*.csv']}
 )
