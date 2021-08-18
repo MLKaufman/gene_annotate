@@ -6,6 +6,7 @@ setup(
     name='gene_annotate',
     version='1.0',
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
+    package_dir={'gene_annotate': 'gene_annotate'},
     entry_points={'console_scripts': ['gene_annotate=gene_annotate.gene_annotate:main']},
     python_requires=">=3.6",
     install_requires="pandas",
