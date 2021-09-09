@@ -10,11 +10,20 @@ pip install pipx
 
 pipx install git+https://github.com/MLKaufman/gene_annotate.git
 ```
-
+can also be installed with vanilla pip:
+```
+pip install git+https://github.com/MLKaufman/gene_annotate.git
+```
+  
+Once installed the package is available as a command line executable:
+```
+gene_annotate
+```
+  
 ## Example Usage:
 
 ```
-usage: gene_annotate.py [-h] [-i] [-s SPECIES] [-a ANNOTATEMODE] [-c COLUMN]
+usage: gene_annotate [-h] [-i] [-s SPECIES] [-a ANNOTATEMODE] [-c COLUMN]
 
 optional arguments:
   -h, --help            show this help message and exit
